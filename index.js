@@ -27,16 +27,20 @@ let count = 0
 
 while (ulang) {
     count ++;
-    ulang= confirm('Apakah anda mau mengulangi?')
+    ulang= confirm('Apakah anda mau mengulang?')
 }
 document.write ('<br />')
 document.write ('Perulangan sudah dilakukan sebanyak ', count, ' kali')
 
 // Nomor 5
-let kuis = prompt('Sebutkan kepanjangan dari nama IB?')
 
-    if ( kuis == 'Impact Byte') {
-        document.write('<h1>Selamat Jawaban Kamu Benar !</h1>')
+let kuis = prompt('Sebutkan kepanjangan dari nama IB?')
+while (kuis) {
+    if (kuis != 'Impact Byte') {
+        kuis = prompt ('Sebutkan kepanjangan dari IB?')
     } else {
-        document.write('<h1>Jawaban Kamu Salah, Silahkan COBA LAGI!</h1>')
+        alert ('Selamat jawaban kamu benar!')
+        break;
     }
+}
+
